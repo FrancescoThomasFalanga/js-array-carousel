@@ -25,11 +25,14 @@ let upArroEl = document.getElementById("up-arrow");
 let downArrowEl = document.getElementById("down-arrow");
 let activeImgEl = document.getElementById("active-img");
 
+
 // memorizzo una variabile di indice = 0
 let index = 0;
 
+
 // inizio inserendo dentro il parametro src il valore della prima immagine dall'array
 activeImgEl.src = images[index];
+
 
 // rendo dinamica la freccia UP in modo tale da switchare immagine
 upArroEl.addEventListener("click", function() {
@@ -42,6 +45,8 @@ upArroEl.addEventListener("click", function() {
 
 })
 
+
+
 // rendo dinamica la freccia DOWN in modo tale da switchare immagine
 downArrowEl.addEventListener("click", function() {
 
@@ -52,3 +57,4 @@ downArrowEl.addEventListener("click", function() {
     activeImgEl.src = images[index];
 
 })
+
