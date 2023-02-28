@@ -50,7 +50,6 @@ upArrowEl.addEventListener("click", function() {
     // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
     activeImgEl.src = images[isClick];
     
-    
 });
 
 
