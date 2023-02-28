@@ -21,7 +21,7 @@ creare un carosello come nello screenshot allegato.
 const images = ["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"];
 
 // preparo gli elementi in js corrispondenti agli elementi html
-let upArroEl = document.getElementById("up-arrow");
+let upArrowEl = document.getElementById("up-arrow");
 let downArrowEl = document.getElementById("down-arrow");
 let activeImgEl = document.getElementById("active-img");
 
@@ -35,15 +35,22 @@ activeImgEl.src = images[index];
 
 
 // rendo dinamica la freccia UP in modo tale da switchare immagine
-upArroEl.addEventListener("click", function() {
+upArrowEl.addEventListener("click", function() {
 
-        // aumentare il valore dell'index di un'unità
-        index++;
+    // aumentare il valore dell'index di un'unità
+    index++;
     
-        // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
-        activeImgEl.src = images[index];
+    // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
+    activeImgEl.src = images[index];
 
-})
+    // loop infinito per far tornare all'ultima immagine
+    if (index == 4) {
+
+        index = -1;
+
+    }
+
+});
 
 
 
@@ -56,5 +63,12 @@ downArrowEl.addEventListener("click", function() {
     // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
     activeImgEl.src = images[index];
 
-})
+    // loop infinito per far tornare alla prima immagine
+    if (index == 0) {
+
+        index = 5;
+
+    }
+
+});
 
