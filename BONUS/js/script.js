@@ -21,8 +21,9 @@ creare un carosello come nello screenshot allegato.
 
 const mainImage = document.querySelector('.active-img-container img');
 const thumbnails = document.querySelectorAll('.thumbnail');
-const upArrowEl = document.querySelector('#up-arrow');
-const downArrowEl = document.querySelector('#down-arrow');
+let upArrowEl = document.getElementById("up-arrow");
+let downArrowEl = document.getElementById("down-arrow");
+
 let isClick = 0;
 
 // mostra l'immagine iniziale

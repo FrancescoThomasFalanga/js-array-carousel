@@ -27,28 +27,28 @@ let activeImgEl = document.getElementById("active-img");
 
 
 // memorizzo una variabile di indice = 0
-let index = 0;
+let isClick = 0;
 
 
 // inizio inserendo dentro il parametro src il valore della prima immagine dall'array
-activeImgEl.src = images[index];
+activeImgEl.src = images[isClick];
 
 
 // rendo dinamica la freccia UP in modo tale da switchare immagine
 upArrowEl.addEventListener("click", function() {
 
     // loop infinito per far tornare alla prima immagine
-    if (index == 0) {
+    if (isClick == 0) {
     
-        index = 5;
+        isClick = 5;
     
     }
     
     // aumentare il valore dell'index di un'unità
-    index--;
+    isClick--;
     
     // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
-    activeImgEl.src = images[index];
+    activeImgEl.src = images[isClick];
     
     
 });
@@ -59,17 +59,17 @@ upArrowEl.addEventListener("click", function() {
 downArrowEl.addEventListener("click", function() {
     
     // loop infinito per far tornare all'ultima immagine
-    if (index == 4) {
+    if (isClick == 4) {
     
-        index = -1;
+        isClick = -1;
     
     }
     
-    // aumentare il valore dell'index di un'unità
-    index++;
+    // aumentare il valore dell'isClick di un'unità
+    isClick++;
     
     // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
-    activeImgEl.src = images[index];
+    activeImgEl.src = images[isClick];
 
 
 });
