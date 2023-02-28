@@ -16,3 +16,39 @@ creare un carosello come nello screenshot allegato.
     Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
     Aggiungi la classe active al cerchio relativo alla posizione dell'indice
 */
+
+// preparo un array di immagini
+const images = ["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"];
+
+// preparo gli elementi in js corrispondenti agli elementi html
+let upArroEl = document.getElementById("up-arrow");
+let downArrowEl = document.getElementById("down-arrow");
+let activeImgEl = document.getElementById("active-img");
+
+// memorizzo una variabile di indice = 0
+let index = 0;
+
+// inizio inserendo dentro il parametro src il valore della prima immagine dall'array
+activeImgEl.src = images[index];
+
+// rendo dinamica la freccia UP in modo tale da switchare immagine
+upArroEl.addEventListener("click", function() {
+
+        // aumentare il valore dell'index di un'unità
+        index++;
+    
+        // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
+        activeImgEl.src = images[index];
+
+})
+
+// rendo dinamica la freccia DOWN in modo tale da switchare immagine
+downArrowEl.addEventListener("click", function() {
+
+    // aumentare il valore dell'index di un'unità
+    index--;
+    
+    // Mostrare l'immagine alla posizione dell'array relativa al valore dell'indice -1
+    activeImgEl.src = images[index];
+
+})
