@@ -8,10 +8,9 @@
     display: flex;
     flex-flow: nowrap row;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 100px auto;
 }
-
 
 
 /* CAROSELLO */
@@ -21,7 +20,7 @@
 /* __________________________________ */
 img {
     object-fit: cover;
-    width: 1000px;
+    width: 1200px;
     height: 500px;
 }
 
@@ -49,3 +48,22 @@ img {
 
 
 /* /CAROSELLO */
+
+
+.thumbnails {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .thumbnail {
+    width: 300px;
+    height: 100px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .thumbnail.active {
+    opacity: 1;
+  }

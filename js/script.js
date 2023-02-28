@@ -26,6 +26,8 @@ let downArrowEl = document.getElementById("down-arrow");
 let activeImgEl = document.getElementById("active-img");
 
 
+
+
 // memorizzo una variabile di indice = 0
 let index = 0;
 
@@ -74,3 +76,11 @@ downArrowEl.addEventListener("click", function() {
 
 });
 
+// Show the current image
+function showImage() {
+    mainImage.src = thumbnails[currentImage].src;
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.classList.remove('active');
+    });
+    thumbnails[currentImage].classList.add('active');
+  }
